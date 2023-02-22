@@ -1,0 +1,8 @@
+.header {
+	background-image: url("../images/201201-Meama-Op.png");
+	height: 297px;
+	max-width: 100%;
+	position: relative;
+	background-size: cover;
+	background-color: black;
+}

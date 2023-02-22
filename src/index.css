@@ -1,0 +1,22 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+body {
+	max-width: 600px;
+	margin: auto;
+}
+
+@media (max-width: 375px) {
+	.container {
+		max-width: 375px;
+	}
+}
+@media (max-width: 600px) {
+	.container {
+		max-width: 600px;
+	}
+}
+
+/* 77788899000------------------ */
