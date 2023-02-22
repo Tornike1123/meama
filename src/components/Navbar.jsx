@@ -5,13 +5,11 @@ import Language from "../components/Language";
 
 const Navbar = () => {
 	return (
-		<div>
+		<div className={classes.flex}>
 			<div>
 				<div className={classes.logo_container}>
-					<img src={logo} alt="" />
+					<img src={logo} alt="" className={classes.logo} />
 				</div>
-				<h1>MEAMA</h1>
-				<p>Collect</p>
 			</div>
 			<div>
 				<Language />

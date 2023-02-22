@@ -1,0 +1,23 @@
+.wrapper {
+	margin-top: 25px;
+	margin-right: 26px;
+	display: flex;
+}
+.icon {
+	color: #fff;
+	font-size: 20px;
+	margin-right: 10px;
+}
+.arrow {
+	font-size: 10px;
+	color: #fff;
+}
+.lang {
+	color: #fff;
+	font-size: 14px;
+	line-height: 16px;
+	margin-right: 5px;
+}
+.wrapDiv {
+	margin-bottom: 20px;
+}
