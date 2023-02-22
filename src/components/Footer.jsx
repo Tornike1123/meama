@@ -21,18 +21,24 @@ const Footer = () => {
 		<div className={classes.wrapper}>
 			<div>
 				<div>
-					<p>{footerContactUs.name}</p>
+					<p className={classes.connect}>{footerContactUs.name}</p>
 					<div className={classes.dFlex}>
 						<div>
-							<p>{footerContactUs.value}</p>
+							<p className={classes.tel}>
+								{footerContactUs.value}
+							</p>
 						</div>
-						{footerSocialData.map((data, index) => (
-							<div key={index} className={classes.dFlexinline}>
+						<div className={classes.dFlexinline}>
+							{footerSocialData.map((data, index) => (
 								<a href={data.link}>
-									<img src={data.imageUrl} alt="" />
+									<img
+										src={data.imageUrl}
+										alt=""
+										className={classes.icon}
+									/>
 								</a>
-							</div>
-						))}
+							))}
+						</div>
 					</div>
 				</div>
 			</div>

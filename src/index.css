@@ -6,6 +6,7 @@
 body {
 	max-width: 600px;
 	margin: auto;
+	font-family: "FiraGO", sans-serif;
 }
 
 @media (max-width: 375px) {
