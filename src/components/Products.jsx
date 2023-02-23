@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import classes from "./Products.module.css";
 
 const Products = () => {
 	const [productList, setProductList] = useState([]);
+	const [bColor, setBcolor] = useState(null);
 
 	useEffect(() => {
 		axios
@@ -15,36 +17,22 @@ const Products = () => {
 
 	return (
 		<div>
-			{productList.map((data) => {
-				let color = [];
-				data.products.map((bg) => {
-					color.push(bg.bgColor);
-				});
-
-				const bgColors = color.map((colr) => );
-
-				return (
-					<div
-						key={data.id}
-						style={{
-							backgroundColor: {},
-						}}
-					>
-						<p>{data.name}</p>
-						<div>
-							{data.products.map((desc, idx) => {
-								return (
-									<div key={idx}>
-										<p>{desc.id}</p>
-										<p>{desc.name}</p>
-										<img src={desc.imgUrls[0]} alt="" />
-									</div>
-								);
-							})}
+			{productList.map((data) =>
+				data.products.map((product) => (
+					<div>
+						<h1>{data.name}</h1>
+						<div style={{ backgroundColor: `${product.bgColor}` }}>
+							<p>{product.name}</p>
+							<img
+								src={product.imgUrls}
+								alt=""
+								className={classes.imgS}
+							/>
+							<h1>{product.price}ლარი</h1>
 						</div>
 					</div>
-				);
-			})}
+				))
+			)}
 		</div>
 	);
 };
