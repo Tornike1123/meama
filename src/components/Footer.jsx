@@ -30,7 +30,7 @@ const Footer = () => {
 						</div>
 						<div className={classes.dFlexinline}>
 							{footerSocialData.map((data, index) => (
-								<a href={data.link}>
+								<a key={index} href={data.link}>
 									<img
 										src={data.imageUrl}
 										alt=""
