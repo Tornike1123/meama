@@ -20,4 +20,8 @@ body {
 	}
 }
 
+#root > main > div > div.Products_card__rKtBh > div:nth-child(1) > h3 {
+	color: #ffff;
+}
+
 /* 77788899000------------------ */
