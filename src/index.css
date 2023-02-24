@@ -24,4 +24,20 @@ body {
 	color: #ffff;
 }
 
+#root > main > div > div.Products_card__rKtBh > div:nth-child(2) img {
+	padding-top: 40px;
+}
+
+#root
+	> main
+	> div
+	> div.Products_card__rKtBh
+	> div:nth-child(9)
+	> div
+	> div
+	> a
+	> img {
+	width: 30%;
+}
+
 /* 77788899000------------------ */

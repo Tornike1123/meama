@@ -21,7 +21,7 @@ const Products = () => {
 				{product.products.map((coffe, idx) => (
 					<div className={classes.card_prod}>
 						<Link
-							to={`/DetailedScreen`}
+							to={`/DetailedScreen/${coffe.id}`}
 							className={classes.child}
 							style={{
 								background: `${coffe.bgColor}`,
@@ -32,7 +32,9 @@ const Products = () => {
 								src={coffe.mainPhoto}
 								alt="coffe"
 							/>
-							<p key={idx}>{coffe.name}</p>
+							<p className={classes.title} key={idx}>
+								{coffe.name}
+							</p>
 							<p className={classes.price}>{coffe.price}ლ</p>
 						</Link>
 					</div>

@@ -4,6 +4,7 @@
 		margin: 0 auto;
 		border-top: 1px solid #70707022;
 		padding-top: 30px;
+		margin-top: 50px;
 	}
 }
 
@@ -42,4 +43,8 @@
 	border-color: #000000;
 	margin-top: 10px;
 	cursor: pointer;
+}
+.title {
+	padding-left: 20px;
+	padding-right: 20px;
 }

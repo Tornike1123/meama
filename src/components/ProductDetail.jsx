@@ -1,19 +1,15 @@
-import React, {useState, useEffect} from 'react'
-import { useParams } from 'react-router-dom'
-import axios from 'axios';
-
-
+import React, { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
+import axios from "axios";
 
 const ProductDetail = () => {
+	const { id } = useParams();
 
-    const { id } = useParams();
+	const [productDetail, setProductDetail] = useState(null);
+	// const [productList, setProductList] = useState([]);
+	console.log(productDetail);
 
-
-    const [productDetail, setProductDetail] = useState(null);
-    // const [productList, setProductList] = useState([]);
-    console.log(productDetail)
-
-    useEffect(() => {
+	useEffect(() => {
 		axios
 			.get(`https://cms.meamacollect.ge/meama-collect/api/client/ka/`)
 			.then((getData) => {
@@ -21,11 +17,7 @@ const ProductDetail = () => {
 				console.log(getData.data);
 			});
 	}, [id]);
-  return (
-    <div>
-       example
-    </div>
-  )
-}
+	return <div>example</div>;
+};
 
-export default ProductDetail
+export default ProductDetail;

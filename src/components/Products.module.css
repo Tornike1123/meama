@@ -29,6 +29,7 @@ h3 {
 	font-style: normal;
 	text-align: center;
 	color: #000000;
+	padding-top: 20px;
 }
 
 .card_prod {
@@ -43,8 +44,8 @@ h3 {
 }
 
 .child {
-	width: 250px;
-	height: 300px;
+	width: 200px;
+	height: 270px;
 	border-radius: 8px;
 }
 .product_image {
@@ -58,4 +59,7 @@ h3 {
 	margin-top: -200px;
 	z-index: 999999;
 	position: relative;
+}
+.title {
+	padding-top: 10px;
 }
