@@ -4,7 +4,6 @@ import classes from "./Products.module.css";
 
 const Products = () => {
 	const [productList, setProductList] = useState([]);
-	const [bColor, setBcolor] = useState(null);
 
 	useEffect(() => {
 		axios
@@ -14,27 +13,25 @@ const Products = () => {
 				console.log(getData.data);
 			});
 	}, []);
-
-	return (
-		<div>
-			{productList.map((data) =>
-				data.products.map((product) => (
-					<div>
-						<h1>{data.name}</h1>
-						<div style={{ backgroundColor: `${product.bgColor}` }}>
-							<p>{product.name}</p>
-							<img
-								src={product.imgUrls}
-								alt=""
-								className={classes.imgS}
-							/>
-							<h1>{product.price}ლარი</h1>
-						</div>
-					</div>
-				))
-			)}
+	const productCategory = productList.map((product, idx) => (
+		<div key={idx}>
+			<h1>{product.name}</h1>
+			{/* {console.log(product)} */}
+			{product.products.map((coffe,idx) => (
+				<div style={{
+					background : `${coffe.bgColor}`
+				}}>
+				{console.log(coffe)}
+				<img src={coffe.mainPhoto} alt="coffe" />
+				<p key={idx}>{coffe.name}</p>
+				<p>{coffe.price}ლ</p>
+				</div>
+               
+			))}
 		</div>
-	);
+	));
+
+	return <div>{productCategory}</div>;
 };
 
 export default Products;
