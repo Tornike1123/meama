@@ -14,15 +14,15 @@ const Products = () => {
 			});
 	}, []);
 	const productCategory = productList.map((product, idx) => (
-		<div key={idx}>
+		<div key={idx} className={classes.category_main}>
 			<h1>{product.name}</h1>
 			{/* {console.log(product)} */}
 			{product.products.map((coffe,idx) => (
-				<div style={{
+				<div className={classes.child} style={{
 					background : `${coffe.bgColor}`
 				}}>
 				{console.log(coffe)}
-				<img src={coffe.mainPhoto} alt="coffe" />
+				<img className={classes.product_image} src={coffe.mainPhoto} alt="coffe" />
 				<p key={idx}>{coffe.name}</p>
 				<p>{coffe.price}ლ</p>
 				</div>

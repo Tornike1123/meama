@@ -5,7 +5,7 @@ import Products from "../components/Products";
 
 const Home = () => {
 	return (
-		<div>
+		<div style={{width:'600px', overflowX:'hidden'}}>
 			<Header />
 			<h1>Home Page </h1>
 			<Products />

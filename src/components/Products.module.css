@@ -1,1 +1,16 @@
 
+.category_main{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.category_main h1{
+    width: 100%;
+}
+.child{
+    width: 50%;
+}
+
+.product_image{
+    width: 250px;
+}
