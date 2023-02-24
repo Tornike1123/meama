@@ -1,16 +1,56 @@
-
-.category_main{
-  display: flex;
-  flex-wrap: wrap;
-  width: 100%;
-}
-.category_main h1{
-    width: 100%;
-}
-.child{
-    width: 50%;
+a {
+	text-decoration: none;
+	color: #000;
+	text-align: center;
+	font-size: 16px;
+	font-style: normal;
 }
 
-.product_image{
-    width: 250px;
+.infoWrapper {
+	display: flex;
+	overflow-x: scroll;
+}
+
+.infoWrapper::-webkit-scrollbar {
+	display: none;
+}
+
+h1 {
+	margin-bottom: 50px;
+}
+
+.price {
+	font-family: "helvetica neue lt geo";
+	font-size: 21px;
+	font-weight: bold;
+	line-height: 21px;
+	font-style: normal;
+	text-align: center;
+	color: #000000;
+}
+
+.card_prod {
+	display: flex;
+	flex-wrap: wrap;
+	margin-right: 10px;
+}
+
+.category_main {
+	margin-top: 50px;
+	border-radius: 8px;
+}
+
+.child {
+	width: 250px;
+	height: 400px;
+	border-radius: 8px;
+}
+.product_image {
+	width: 113px;
+	height: auto;
+}
+
+.card {
+	padding-left: 26px;
+	max-width: 580px;
 }
