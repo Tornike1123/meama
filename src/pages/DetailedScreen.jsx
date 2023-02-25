@@ -14,6 +14,31 @@ const DetailedScreen = () => {
 			});
 	}, []);
 
+	const allProducts = productList.map((product, inx) => {
+		const filtered = product.products.map((drink) => drink);
+		const filteredProducts = filtered.map((single) => single);
+		const ready = filteredProducts.filter((el) => el.id === +id);
+		const fetched = ready[0];
+		// const ddd = ready.specifications.map((dddd) => console.log(dddd));
+		//console.log(fetched);
+		const codeMy = fetched?.description;
+
+		return (
+			<div key={inx}>
+				<p>{fetched?.price}</p>
+
+				<p>{fetched?.name}</p>
+				<img
+					style={{ background: fetched?.bgColor }}
+					src={fetched?.mainPhoto}
+					alt=""
+				/>
+				<p>{fetched?.title}</p>
+				<p dangerouslySetInnerHTML={{ __html: codeMy }}></p>
+			</div>
+		);
+	});
+
 	const navigate = useNavigate();
 
 	const navigateHandler = () => {
@@ -22,9 +47,7 @@ const DetailedScreen = () => {
 
 	return (
 		<div>
-			<h1>Detailed Screen</h1>
-
-			<p>{id}</p>
+			{allProducts}
 			<button onClick={navigateHandler}>Navigate</button>
 		</div>
 	);

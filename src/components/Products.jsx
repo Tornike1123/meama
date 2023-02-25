@@ -19,7 +19,7 @@ const Products = () => {
 			<h3>{product.name}</h3>
 			<div className={classes.infoWrapper}>
 				{product.products.map((coffe, idx) => (
-					<div className={classes.card_prod}>
+					<div key={idx} className={classes.card_prod}>
 						<Link
 							to={`/DetailedScreen/${coffe.id}`}
 							className={classes.child}
