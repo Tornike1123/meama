@@ -1,6 +1,6 @@
 .wrapper {
 	margin-top: 25px;
-	margin-right: 26px;
+	margin-right: 26px !important;
 	display: flex;
 }
 .icon {

@@ -1,0 +1,44 @@
+.flex {
+	display: flex;
+	justify-content: space-between;
+	gap: 100px;
+	margin-top: 50px;
+}
+.title {
+	color: #000000;
+	opacity: 0.5;
+}
+.sz {
+	font-size: 24px;
+	padding-top: 50px;
+}
+.sz2 {
+	font-size: 24px;
+	padding-top: 5px;
+}
+.icons {
+	margin-left: auto;
+}
+.icon {
+	background-color: rgba(0, 0, 0, 0.13);
+	border-radius: 50%;
+	padding: 10px;
+	cursor: pointer;
+	margin-left: 26px;
+}
+.mainDiv {
+	padding-left: 26px;
+}
+.imgg {
+	width: 200px;
+	height: auto;
+}
+.backGr {
+	border-radius: 190px 0 0 190px;
+}
+
+.fl {
+	margin-top: 25px;
+	margin-right: -1px;
+	display: flex;
+}
