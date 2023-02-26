@@ -2,8 +2,6 @@ import React from "react";
 import classes from "./Header.module.css";
 import logo from "../images/logo.png";
 import Modal from "./Modal";
-import { faGlobe } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Header = () => {
 	return (
@@ -15,7 +13,6 @@ const Header = () => {
 					</div>
 				</div>
 				<div>
-					<FontAwesomeIcon icon={faGlobe} className={classes.icon} />
 					<Modal />
 				</div>
 			</div>

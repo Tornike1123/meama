@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import classes from "./Products.module.css";
 import { Link } from "react-router-dom";
-import Modal from "./Modal";
 
 const Products = (selectedValue) => {
 	const [productList, setProductList] = useState([]);
@@ -51,9 +50,7 @@ const Products = (selectedValue) => {
 	return (
 		<div className={classes.card}>
 			{productCategory}
-			<div>
-				<Modal />
-			</div>
+			
 		</div>
 	);
 };

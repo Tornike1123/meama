@@ -3,11 +3,14 @@ import "./Modal.css";
 import axios from "axios";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
+import { faGlobe } from "@fortawesome/free-solid-svg-icons";
 
 export default function Modal() {
 	const [modal, setModal] = useState(false);
 	const [lang, setLang] = useState([]);
 	const [langH, setLangH] = useState("ka");
+
+	const lng = `https://cms.meamacollect.ge/meama-collect/api/client/en`;
 
 	useEffect(() => {
 		axios
@@ -46,6 +49,7 @@ export default function Modal() {
 								onChange={() => setLangH(item.code)}
 								name="radioBtn"
 								id={item.code}
+								onClick={lng}
 							/>
 						</div>
 					</div>
@@ -56,12 +60,19 @@ export default function Modal() {
 
 	return (
 		<div className="modalWrapper">
-			<p style={{ color: "#fff" }}>{langH}</p>
-			<FontAwesomeIcon
-				onClick={toggleModal}
-				icon={faChevronDown}
-				className="arrow"
-			/>
+			<div>
+				<FontAwesomeIcon icon={faGlobe} className="icon" />
+			</div>
+			<div>
+				<p style={{ color: "#fff" }}>{langH}</p>
+			</div>
+			<div>
+				<FontAwesomeIcon
+					onClick={toggleModal}
+					icon={faChevronDown}
+					className="arrow"
+				/>
+			</div>
 			{modal && (
 				<div className="modal">
 					<div onClick={toggleModal} className="overlay"></div>

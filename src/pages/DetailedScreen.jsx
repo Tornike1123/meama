@@ -51,7 +51,6 @@ const DetailedScreen = () => {
 			);
 		});
 
-
 		const codeMy = fetched?.description;
 
 		return (

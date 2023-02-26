@@ -4,6 +4,9 @@ body.active-modal {
 
 .modalWrapper {
 	z-index: 999;
+	display: flex;
+	gap: 5px;
+	padding-top: 30px;
 }
 
 .btn-modal {
@@ -11,6 +14,10 @@ body.active-modal {
 	display: block;
 	margin: 100px auto 0;
 	font-size: 18px;
+}
+.icon {
+	color: #fff;
+	font-size: 20px;
 }
 
 .modal,
@@ -45,6 +52,7 @@ body.active-modal {
 	font-size: 10px;
 	color: #fff;
 	cursor: pointer;
+	margin-right: 26px;
 }
 
 .langFlex {
