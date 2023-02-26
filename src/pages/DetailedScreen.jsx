@@ -97,6 +97,8 @@ const DetailedScreen = () => {
 				</div>
 				<div className={classes.icons}>
 					<FontAwesomeIcon icon={faGlobe} />
+				</div>
+				<div>
 					<span>En</span>
 				</div>
 			</div>

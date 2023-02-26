@@ -73,10 +73,7 @@ export default function Modal() {
 			{modal && (
 				<div className="modal">
 					<div onClick={toggleModal} className="overlay"></div>
-					<div className="modal-content">
-						<h2>ენა</h2>
-						{result}
-					</div>
+					<div className="modal-content">{result}</div>
 				</div>
 			)}
 		</div>

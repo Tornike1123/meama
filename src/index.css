@@ -27,6 +27,18 @@ body {
 #root > main > div > div.Products_card__rKtBh > div:nth-child(2) img {
 	padding-top: 40px;
 }
+#root > main > div > div:nth-child(10) > div.DetailedScreen_flex__GwS9q {
+	margin-top: -10px;
+}
+#root
+	> main
+	> div
+	> div:nth-child(10)
+	> div.DetailedScreen_imgFlex__Yqtb0
+	> div:nth-child(1)
+	> div {
+	margin-top: -100px;
+}
 
 #root
 	> main
@@ -39,5 +51,13 @@ body {
 	> img {
 	width: 30%;
 }
-
+#root > main > div > div:nth-child(4) > div.DetailedScreen_flex__GwS9q {
+	margin-top: -200px;
+}
+#root > main > div > div:nth-child(9) > div.DetailedScreen_flex__GwS9q {
+	margin-top: -100px;
+}
+#root > main > div > div:nth-child(8) > div.DetailedScreen_flex__GwS9q {
+	margin-top: -300px;
+}
 /* 77788899000------------------ */
