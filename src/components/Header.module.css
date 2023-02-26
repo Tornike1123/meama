@@ -8,3 +8,37 @@
 	position: relative;
 	z-index: 0;
 }
+
+.flex {
+	display: flex;
+	justify-content: space-between;
+}
+
+.logo {
+	width: 80px;
+	height: 77px;
+	margin-left: 25px;
+	margin-top: 26px;
+	opacity: 1;
+}
+
+.wrapper {
+	margin-top: 25px;
+	margin-right: 26px !important;
+	display: flex;
+}
+.icon {
+	color: #fff;
+	font-size: 20px;
+	margin-right: 10px;
+}
+
+.lang {
+	color: #fff;
+	font-size: 14px;
+	line-height: 16px;
+	margin-right: 5px;
+}
+.wrapDiv {
+	margin-bottom: 20px;
+}
