@@ -3,20 +3,17 @@ import axios from "axios";
 import classes from "./Products.module.css";
 import { Link } from "react-router-dom";
 
-const Products = (selectedValue) => {
+const Products = () => {
 	const [productList, setProductList] = useState([]);
-	const [langH, setLangH] = useState("ka");
 
 	useEffect(() => {
 		axios
-			.get(
-				`https://cms.meamacollect.ge/meama-collect/api/client/${langH}`
-			)
+			.get(`https://cms.meamacollect.ge/meama-collect/api/client/ka`)
 			.then((getData) => {
 				setProductList(getData.data);
 				console.log(getData.data);
 			});
-	}, [langH]);
+	}, []);
 
 	const productCategory = productList.map((product, idx) => (
 		<div key={idx} className={classes.category_main}>
@@ -47,12 +44,7 @@ const Products = (selectedValue) => {
 		</div>
 	));
 
-	return (
-		<div className={classes.card}>
-			{productCategory}
-			
-		</div>
-	);
+	return <div className={classes.card}>{productCategory}</div>;
 };
 
 export default Products;

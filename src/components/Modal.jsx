@@ -10,8 +10,6 @@ export default function Modal() {
 	const [lang, setLang] = useState([]);
 	const [langH, setLangH] = useState("ka");
 
-	const lng = `https://cms.meamacollect.ge/meama-collect/api/client/en`;
-
 	useEffect(() => {
 		axios
 			.get(
@@ -49,7 +47,6 @@ export default function Modal() {
 								onChange={() => setLangH(item.code)}
 								name="radioBtn"
 								id={item.code}
-								onClick={lng}
 							/>
 						</div>
 					</div>
