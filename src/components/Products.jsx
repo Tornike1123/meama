@@ -17,7 +17,7 @@ const Products = (selectedValue) => {
 				setProductList(getData.data);
 				console.log(getData.data);
 			});
-	}, []);
+	}, [langH]);
 
 	const productCategory = productList.map((product, idx) => (
 		<div key={idx} className={classes.category_main}>

@@ -16,6 +16,9 @@
 	font-size: 24px;
 	padding-top: 5px;
 }
+.pad {
+	padding-top: 20px;
+}
 .icons {
 	margin-left: auto;
 }
@@ -41,4 +44,18 @@
 	margin-top: 25px;
 	margin-right: -1px;
 	display: flex;
+}
+.imgRes {
+	width: 70px;
+	height: 70px;
+}
+.imgFlex {
+	display: flex;
+	gap: 20px;
+}
+
+.backCol {
+	border-radius: 8px;
+	padding: 15px;
+	margin-bottom: 35px;
 }

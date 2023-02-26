@@ -8,6 +8,7 @@ import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 
 const DetailedScreen = () => {
 	const [productList, setProductList] = useState([]);
+
 	const { id } = useParams();
 
 	useEffect(() => {
@@ -29,11 +30,27 @@ const DetailedScreen = () => {
 		const filteredProducts = filtered.map((single) => single);
 		const ready = filteredProducts.filter((el) => el.id === +id);
 		const fetched = ready[0];
-		const specifications = fetched?.specifications.map((spec) =>
-			console.log(spec)
-		);
-		// const imgUrl = fetched?.imgUrls.map((imgUr) => console.log(imgUr));
+		const specification = fetched?.specifications.map((spec, idx) => {
+			return (
+				<div key={idx} className={classes.pad}>
+					<p className={classes.title}>{spec.name}</p>
+					<p>{spec.value}</p>
+				</div>
+			);
+		});
 		console.log(fetched);
+
+		const imgggg = fetched?.imgUrls.map((imm) => {
+			return (
+				<div
+					style={{ background: fetched?.bgColor }}
+					className={classes.backCol}
+				>
+					<img className={classes.imgRes} src={imm} alt="" />
+				</div>
+			);
+		});
+
 
 		const codeMy = fetched?.description;
 
@@ -43,6 +60,7 @@ const DetailedScreen = () => {
 					<div>
 						<p className={classes.sz}>{fetched?.name}</p>
 						<p className={classes.sz2}>{fetched?.price}</p>
+						<p>{specification}</p>
 					</div>
 					<div
 						style={{ background: fetched?.bgColor }}
@@ -55,12 +73,15 @@ const DetailedScreen = () => {
 						/>
 					</div>
 				</div>
+				<div className={classes.imgFlex}>
+					<div>{imgggg?.[0]}</div>
+					<div>{imgggg?.[1]}</div>
+				</div>
 				<p className={classes.title}>{fetched?.title}</p>
 				<p
 					dangerouslySetInnerHTML={{ __html: codeMy }}
 					className={classes.desc}
 				></p>
-				<h1>{specifications?.name}</h1>
 			</div>
 		);
 	});
