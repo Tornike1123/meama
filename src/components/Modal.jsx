@@ -39,7 +39,7 @@ export default function Modal() {
 							<img src={item.imageUrl} alt="" />
 						</div>
 						<div>{item.name}</div>
-						<div>
+						<div className="radio">
 							<input
 								type="radio"
 								value={item.code}
