@@ -60,11 +60,13 @@ body.active-modal {
 	gap: 10px;
 	width: 100%;
 	padding-top: 30px;
+	justify-content: space-between;
 }
 
-.langFlex input {
-	margin-left: 100px;
-}
 .modal-content h2 {
 	margin-bottom: 30px;
+}
+
+.radio {
+	cursor: pointer;
 }
