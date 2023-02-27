@@ -1,14 +1,15 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import "./Modal.css";
 import axios from "axios";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import { faGlobe } from "@fortawesome/free-solid-svg-icons";
+import { AppContext } from "../pages/Home";
 
 export default function Modal() {
 	const [modal, setModal] = useState(false);
 	const [lang, setLang] = useState([]);
-	const [langH, setLangH] = useState("ka");
+	const { langID, setLangID } = useContext(AppContext);
 
 	useEffect(() => {
 		axios
@@ -43,8 +44,8 @@ export default function Modal() {
 							<input
 								type="radio"
 								value={item.code}
-								checked={langH === item.code}
-								onChange={() => setLangH(item.code)}
+								checked={langID === item.code}
+								onChange={() => setLangID(item.code)}
 								name="radioBtn"
 								id={item.code}
 							/>
@@ -61,7 +62,7 @@ export default function Modal() {
 				<FontAwesomeIcon icon={faGlobe} className="icon" />
 			</div>
 			<div>
-				<p style={{ color: "#fff" }}>{langH}</p>
+				<p style={{ color: "#fff" }}>{langID}</p>
 			</div>
 			<div>
 				<FontAwesomeIcon

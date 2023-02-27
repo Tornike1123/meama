@@ -1,19 +1,23 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import axios from "axios";
 import classes from "./Products.module.css";
 import { Link } from "react-router-dom";
+import { AppContext } from "../pages/Home";
 
 const Products = () => {
 	const [productList, setProductList] = useState([]);
+	const { langID } = useContext(AppContext);
 
 	useEffect(() => {
 		axios
-			.get(`https://cms.meamacollect.ge/meama-collect/api/client/ka`)
+			.get(
+				`https://cms.meamacollect.ge/meama-collect/api/client/${langID}`
+			)
 			.then((getData) => {
 				setProductList(getData.data);
 				console.log(getData.data);
 			});
-	}, []);
+	}, [langID]);
 
 	const productCategory = productList.map((product, idx) => (
 		<div key={idx} className={classes.category_main}>
